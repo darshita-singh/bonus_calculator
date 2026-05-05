@@ -23,7 +23,7 @@ jobs:
       - name: Checkout pr-jira-sync repo
         uses: actions/checkout@v4
         with:
-          repository: Basavaraj011/pr-jira-sync
+          repository: darshita-singh/pr-jira-sync
           ref: main
           path: pr-jira-sync
  
