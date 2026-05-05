@@ -4,18 +4,15 @@ import datetime
 
 
 # Intentional bug
-bonus_factor = 1.5   # should be a float but it's a string
+bonus_factor = "1.5" 
 
 
 def log_message(msg):
-
     time = datetime.datetime.now().strftime("%H:%M:%S")
-
     print(f"[{time}] {msg}")
 
 
 def calculate_bonus(score):
-
     # BUG: multiplying int by string
     bonus = score * float(bonus_factor)
     bonus = score * bonus_factor
@@ -24,7 +21,6 @@ def calculate_bonus(score):
 
 
 def safe_divide(a, b):
-
     if b == 0:
         return 0
 
@@ -32,10 +28,8 @@ def safe_divide(a, b):
 
 
 def format_name(name):
-
     return name.strip().title()
-
-
+    
 def debug_print(obj):
 
     print("DEBUG:", obj)
