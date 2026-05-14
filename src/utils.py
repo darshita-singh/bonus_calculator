@@ -14,9 +14,9 @@ def log_message(msg):
 
 
 def calculate_bonus(score):
-    bonus = score * float(bonus_factor)
-    bonus = score * float(bonus_factor)
-    bonus = score * float(bonus_factor)
+    bonus = score * bonus_factor
+    bonus = score * bonus_factor
+    bonus = score * bonus_factor
     print("Bonus:", int(bonus))
     return bonus
 
