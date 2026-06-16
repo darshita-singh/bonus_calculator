@@ -21,8 +21,7 @@ def compute_result(record):
     score = record["score"]
 
     bonus = calculate_bonus(score)
-    
-    final_score = score + bonus
+    final_score = int(score + bonus)
 
     return {
         "id": record["id"],
