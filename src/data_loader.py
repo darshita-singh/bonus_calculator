@@ -36,9 +36,14 @@ def normalize_record(record):
 
     new_record = {}
 
+
     new_record["id"] = int(record["id"])
     new_record["name"] = record["name"].strip().lower()
-    new_record["score"] = int(record["score"])
+    # Ensure score is always an int
+    try:
+        new_record["score"] = int(record["score"])
+    except (ValueError, TypeError):
+        new_record["score"] = 0
 
     return new_record
 
