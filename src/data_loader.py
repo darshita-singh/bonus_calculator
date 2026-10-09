@@ -2,6 +2,7 @@ import random
 from utils import log_message
 
 
+
 def generate_fake_data():
     names = ["alice", "bob", "charlie", "david", "eve"]
 
@@ -36,9 +37,14 @@ def normalize_record(record):
 
     new_record = {}
 
+
     new_record["id"] = int(record["id"])
     new_record["name"] = record["name"].strip().lower()
+    # Ensure score is always int
     new_record["score"] = int(record["score"])
+    # If bonus exists, ensure it's int
+    if "bonus" in record:
+        new_record["bonus"] = int(record["bonus"])
 
     return new_record
 
