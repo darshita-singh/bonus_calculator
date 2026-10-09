@@ -11,7 +11,8 @@ def generate_fake_data():
         record = {
             "id": i,
             "name": random.choice(names),
-            "score": random.randint(10, 100)
+            "score": random.randint(10, 100),
+            "bonus": random.randint(0, 10)
         }
         data.append(record)
 
@@ -39,6 +40,8 @@ def normalize_record(record):
     new_record["id"] = int(record["id"])
     new_record["name"] = record["name"].strip().lower()
     new_record["score"] = int(record["score"])
+    if "bonus" in record:
+        new_record["bonus"] = int(record["bonus"])
 
     return new_record
 
